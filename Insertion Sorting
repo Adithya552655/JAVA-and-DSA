@@ -1,0 +1,26 @@
+package DSA;
+import java.util.Arrays;
+
+public class Insertion {
+
+    public int[] insertionSort(int[] nums) {
+        for (int i=1;i<nums.length;i++){
+            int j=i,temp=0;
+            while(j>0 && nums[j-1]>nums[j]){
+                temp = nums[j];
+                nums[j] = nums[j - 1];
+                nums[j - 1] = temp;
+                j--;
+                System.out.println("completed");
+            }
+
+        }
+        return nums;
+    }
+    public static void main(String args[]){
+        int arr[]={7,4,1,5,3};
+        Insertion sol=new Insertion();
+        System.out.println(Arrays.toString(sol.insertionSort(arr)));
+    }
+
+}
