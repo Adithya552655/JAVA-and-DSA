@@ -3,10 +3,14 @@ class Solution {
     public int[] bubbleSort(int[] nums) {
         for(int i=0;i<nums.length-1 ;i++){
             for(int j=0;j<nums.length-i-1;j++){
-                int num1=nums[j],num2=nums[j+1];
+                int num1=nums[j],num2=nums[j+1],count=0;
                 if(num1>num2){
                     nums[j]=num2;
                     nums[j+1]=num1;
+                    count=1;
+                }
+                if(count==0){
+                    break;
                 }
             }
         }
